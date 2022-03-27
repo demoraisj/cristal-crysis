@@ -1,0 +1,76 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"airbnb",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": { },
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"extraFileExtensions": [".svelte"],
+		"project": "./tsconfig.json"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"svelte3"
+	],
+	"overrides": [
+		{
+			"files": [
+				"*.svelte"
+			],
+			"processor": "svelte3/svelte3"
+		}
+	],
+	"settings": {
+		"svelte3/typescript": true
+	},
+	"ignorePatterns": [
+		"node_modules/",
+		"dist/",
+		"build/"
+	],
+	"rules": {
+		"@typescript-eslint/consistent-type-imports": [
+			"error",
+			{
+				"prefer": "type-imports"
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-var-requires": "off",
+        "indent": ["warn", 4],
+		"quotes": [
+			"warn",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		"camelcase": "off",
+		"no-void": "off",
+		"no-nested-ternary": "off",
+		"no-return-assign": "off",
+		"no-underscore-dangle": "off",
+		"import/extensions": "off",
+		"import/no-unresolved": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/prefer-default-export": "off",
+		"max-classes-per-file": "off",
+		"import/no-relative-packages": "off",
+		"import/no-named-default": "off",
+		"no-debugger": "off",
+		"no-console": "off",
+		"@typescript-eslint/no-empty-function": "off"
+	}
+}
